@@ -4,6 +4,7 @@ Imports Newtonsoft.Json
 
 Public Class frmMain
     Private Const strSTUDENTFILE As String = "StudentList.json"
+    Private names() As String = {"Aiden", "Alexander", "Anna", "Anthony", "Arlo", "Benjamin", "Bradley", "Brooks", "Chevy", "Collin", "Francis", "Holly", "Logan", "Matthew", "Michael", "Nathan", "Preston", "Srikar", "Tanmay", "Vincent", "Walker", "Zeph"}
     Private StudentTable As New List(Of Student) 'TODO: Change to List
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PopulateStudentTable()
@@ -29,7 +30,6 @@ Public Class frmMain
         End If
     End Sub
     Private Sub StartFresh()
-        Dim names() As String = {"Aiden", "Alexander", "Anna", "Anthony", "Arlo", "Benjamin", "Bradley", "Brooks", "Chevy", "Collin", "Francis", "Holly", "Logan", "Matthew", "Michael", "Nathan", "Preston", "Srikar", "Tanmay", "Vincent", "Walker", "Zeph"}
         For Each s As String In names
             'add a new student object to our dictionary. 
             'For now we will use the name as the key because this list happens to be unique
